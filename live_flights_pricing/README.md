@@ -131,4 +131,4 @@ We strongly recommend you download a tool like Fiddler or Charles and use it wit
   [locales]: <http://business.skyscanner.net/portal/en-GB/Documentation/Locales>
   [markets]: <http://business.skyscanner.net/portal/en-GB/Documentation/Markets>
   [test harness]: <http://business.skyscanner.net/portal/en-GB/Documentation/FlightsLivePricingQuickStart>
-  [sample_live_flights_pricing_response.json]: <https://github.com/Skyscanner/api-documentation/live_flights_pricing/sample_live_flights_pricing_response.json>
+  [sample_live_flights_pricing_response.json]: <https://raw.githubusercontent.com/Skyscanner/api-documentation/master/live_flights_pricing/sample_live_flights_pricing_response.json>
