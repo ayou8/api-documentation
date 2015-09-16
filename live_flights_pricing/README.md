@@ -133,8 +133,8 @@ We strongly recommend you download a tool like Fiddler or Charles and use it wit
 * Some itineraries have segments that require you to change airport during your journey. You may occasionally observe missing values in the `Segments` array due to this. Similar edge-case behaviour may be seen in segments that are refuel-only stops (these are exceptionally rare these days).
 
   [full documentation]: <http://business.skyscanner.net/portal/en-GB/Documentation/ApiOverview>
-  [currencies]: <http://api.skyscanner.net/portal/en-GB/Documentation/Currencies>
-  [locales]: <http://api.skyscanner.net/portal/en-GB/Documentation/Locales>
-  [markets]: <http://api.skyscanner.net/portal/en-GB/Documentation/Markets>
-  [test harness]: <http://api.skyscanner.net/portal/en-GB/Documentation/FlightsLivePricingQuickStart>
+  [currencies]: <http://business.skyscanner.net/portal/en-GB/Documentation/Currencies>
+  [locales]: <http://business.skyscanner.net/portal/en-GB/Documentation/Locales>
+  [markets]: <http://business.skyscanner.net/portal/en-GB/Documentation/Markets>
+  [test harness]: <http://business.skyscanner.net/portal/en-GB/Documentation/FlightsLivePricingQuickStart>
   [sample_live_flights_pricing_response.json]: <https://raw.githubusercontent.com/Skyscanner/api-documentation/master/live_flights_pricing/sample_live_flights_pricing_response.json>

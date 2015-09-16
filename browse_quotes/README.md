@@ -34,7 +34,7 @@ JSONP-friendly URL:
 http[s]://api.skyscanner.net/apiservices/xd/browsequotes/v1.0/{country}/{currency}/{locale}/{origin}/{destination}/{outbound_date}[/{inbound_date}]?apikey=YOUR_API_KEY_HERE&callback=myJsMethod
 ```
 
-* `country` valid values: See [countries reference] (typically the country in which the ticket purchaser is resident)
+* `country` valid values (typically the country in which the ticket purchaser is resident): See [countries reference]
 * `currency` valid values: See [currencies reference]
 * `locale` valid values: See [locales reference]
 * `origin` and `destination` valid values:
@@ -88,6 +88,6 @@ Accept: application/json
 * Got a `403` error? Did you remember to append your `apiKey` to the query string?
 
   [full documentation]: <http://business.skyscanner.net/portal/en-GB/Documentation/ApiOverview>
-  [currencies reference]: <http://api.skyscanner.net/portal/en-GB/Documentation/Currencies>
-  [locales reference]: <http://api.skyscanner.net/portal/en-GB/Documentation/Locales>
-  [countries reference]: <http://api.skyscanner.net/portal/en-GB/Documentation/Markets>
+  [currencies reference]: <http://business.skyscanner.net/portal/en-GB/Documentation/Currencies>
+  [locales reference]: <http://business.skyscanner.net/portal/en-GB/Documentation/Locales>
+  [countries reference]: <http://business.skyscanner.net/portal/en-GB/Documentation/Markets>
