@@ -1,6 +1,6 @@
 # Skyscanner Browse Quotes API: Quick Start
 
-Use this API to obtain indicative prices for flights over a range of dates and/or routes. The examples below show what kind of question the API can answer.
+Use this API to obtain indicative prices for flights over a range of dates and/or routes. The examples below show what kind of questions the API can answer.
 
 This is a quick-start guide. More comprehensive documentation is available in the [full documentation].
 
@@ -21,18 +21,14 @@ The browse API is **not:**
 
 #### Workflow
 
-Make a GET request with your desired travel parameters. You can use HTTPS if you prefer. You may send the `Accept` header in your request to get responses in `application/json` or `application/xml`.
+Make a GET request with your desired travel parameters. You can use HTTP or HTTPS. You may send the `Accept` header in your request to get responses in `application/json` or `application/xml`.
 
 #### URL Format and Example Request
 
-``` http
-http[s]://api.skyscanner.net/apiservices/browsequotes/v1.0/{country}/{currency}/{locale}/{origin}/{destination}/{outbound_date}[/{inbound_date}]?apikey=YOUR_API_KEY_HERE
-```
+`http[s]://api.skyscanner.net/apiservices/browsequotes/v1.0/{country}/{currency}/{locale}/{origin}/{destination}/{outbound_date}[/{inbound_date}]?apikey=YOUR_API_KEY_HERE`
 
 JSONP-friendly URL:
-``` http
-http[s]://api.skyscanner.net/apiservices/xd/browsequotes/v1.0/{country}/{currency}/{locale}/{origin}/{destination}/{outbound_date}[/{inbound_date}]?apikey=YOUR_API_KEY_HERE&callback=myJsMethod
-```
+`http[s]://api.skyscanner.net/apiservices/xd/browsequotes/v1.0/{country}/{currency}/{locale}/{origin}/{destination}/{outbound_date}[/{inbound_date}]?apikey=YOUR_API_KEY_HERE&callback=myJsMethod`
 
 * `country` valid values (typically the country in which the ticket purchaser is resident): See [countries reference]
 * `currency` valid values: See [currencies reference]
@@ -65,7 +61,7 @@ Accept: application/json
 
 ##### What's the cheapest way to fly from SFO to Greece? I don't care when.
 
-`http://api.skyscanner.net/apiservices/browsequotes/v1.0/US/USD/en-US/SFO/GR/anytime/anytime?apikey=YOUR_API_KEY_HERE`
+`http://api.skyscanner.net/apiservices/browsequotes/v1.0/US/USD/en-US/SFO-iata/GR/anytime/anytime?apikey=YOUR_API_KEY_HERE`
 
 ##### Take me from BOS to SFO on 2015-09-30 and return on 2015-10-03.
 
