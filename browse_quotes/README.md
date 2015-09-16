@@ -41,7 +41,7 @@ http[s]://api.skyscanner.net/apiservices/xd/browsequotes/v1.0/{country}/{currenc
   * `anywhere` for quotes by country
   * Two-letter country code e.g. `US` for quotes by each city in the US
   * Skyscanner city code e.g. `NYCA-sky` for quotes by each airport in New York City (look up codes using autosuggest; see [full documentation])
-  * IATA airport code e.g. `JFK` for quotes specific to JFK airport
+  * IATA airport code e.g. `JFK-iata` for quotes specific to JFK airport
   * `188.39.95.93-ip` to geolocate by IP
   * `37.678,-122.452-latlong` to geolocate by latitude and longitude
 * `outbound_date` and (optionally) `inbound_date` valid values:
