@@ -99,7 +99,7 @@ _Response body JSON document available here: [sample_live_flights_pricing_respon
 * Dates must be in `yyyy-mm-dd` from today (UTC) until a year from now.
 * Always set `groupPricing` to true. This flag exists for backwards compatibility only.
 * Always set `locationSchema` to `iata` for ease of use.
-* References: [currencies], [locales], and [markets] (countries).
+* References: [currencies], [locales], and [markets].
 * `country` is typically a 2-character code indicating the country in which the ticket purchaser is resident.
 * Pax limits: `adults` 1-8, `children` 0-8, `infants` not greater than `adults`.
 * Cabin class: `Economy`, `PremiumEconomy`, `Business`, `First`.
