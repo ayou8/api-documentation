@@ -12,13 +12,13 @@ This is a quick-start guide. More comprehensive documentation is available in th
 
 #### Workflow
 
-First, create a session with your desired travel parameters. Then, poll this session several times for results. An example is given below.
+First, create a session with your desired travel parameters. Then, poll this session several times for results. An example is given below. You can use HTTPS if you prefer.
 
 #### Step 1: Create the Session
 
 ``` http
-POST http://business.skyscanner.net/apiservices/pricing/v1.0/?apikey=YOUR_API_KEY_HERE HTTP/1.1
-Host: business.skyscanner.net
+POST http://api.skyscanner.net/apiservices/pricing/v1.0/?apikey=YOUR_API_KEY_HERE HTTP/1.1
+Host: api.skyscanner.net
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 
 country=US&currency=USD&locale=en-US&locationSchema=iata&grouppricing=true&originplace=SFO-iata&destinationplace=BOS-iata&outbounddate=2015-09-23&inbounddate=2015-09-30&adults=1&children=0&infants=0&cabinclass=Economy
@@ -27,7 +27,7 @@ country=US&currency=USD&locale=en-US&locationSchema=iata&grouppricing=true&origi
 ``` http
 HTTP/1.1 201 Created
 Date: Tue, 15 Sep 2015 13:45:33 GMT
-Location: http://business.skyscanner.net/apiservices/pricing/uk1/v1.0/7ba59ba5863a454db96229ecb2bafe7c_ecilpojl_54BB3A9DB131D06736C557B8F95996A6
+Location: http://api.skyscanner.net/apiservices/pricing/uk1/v1.0/7ba59ba5863a454db96229ecb2bafe7c_ecilpojl_54BB3A9DB131D06736C557B8F95996A6
 ```
 
 #### Step 2: Poll the Session several times
@@ -35,8 +35,8 @@ Location: http://business.skyscanner.net/apiservices/pricing/uk1/v1.0/7ba59ba586
 The URL to poll is given by the `Location` header in the session creation response. You must add your `apiKey` as shown below. All 3 of the following requests are exactly the same, but the responses vary.
 
 ``` http
-GET http://business.skyscanner.net/apiservices/pricing/v1.0/7ba59ba5863a454db96229ecb2bafe7c_ecilpojl_54BB3A9DB131D06736C557B8F95996A6?apikey=YOUR_API_KEY_HERE HTTP/1.1
-Host: business.skyscanner.net
+GET http://api.skyscanner.net/apiservices/pricing/v1.0/7ba59ba5863a454db96229ecb2bafe7c_ecilpojl_54BB3A9DB131D06736C557B8F95996A6?apikey=YOUR_API_KEY_HERE HTTP/1.1
+Host: api.skyscanner.net
 Accept: application/json
 ```
 
@@ -48,8 +48,8 @@ Date: Tue, 15 Sep 2015 13:45:36 GMT
 _(Response body and some headers removed for brevity.)_
 
 ``` http
-GET http://business.skyscanner.net/apiservices/pricing/v1.0/7ba59ba5863a454db96229ecb2bafe7c_ecilpojl_54BB3A9DB131D06736C557B8F95996A6?apikey=YOUR_API_KEY_HERE HTTP/1.1
-Host: business.skyscanner.net
+GET http://api.skyscanner.net/apiservices/pricing/v1.0/7ba59ba5863a454db96229ecb2bafe7c_ecilpojl_54BB3A9DB131D06736C557B8F95996A6?apikey=YOUR_API_KEY_HERE HTTP/1.1
+Host: api.skyscanner.net
 Accept: application/json
 ```
 
@@ -60,8 +60,8 @@ Date: Tue, 15 Sep 2015 13:45:38 GMT
 _(No body is returned with this response code.)_
 
 ``` http
-GET http://business.skyscanner.net/apiservices/pricing/v1.0/7ba59ba5863a454db96229ecb2bafe7c_ecilpojl_54BB3A9DB131D06736C557B8F95996A6?apikey=YOUR_API_KEY_HERE HTTP/1.1
-Host: business.skyscanner.net
+GET http://api.skyscanner.net/apiservices/pricing/v1.0/7ba59ba5863a454db96229ecb2bafe7c_ecilpojl_54BB3A9DB131D06736C557B8F95996A6?apikey=YOUR_API_KEY_HERE HTTP/1.1
+Host: api.skyscanner.net
 Accept: application/json
 ```
 
@@ -124,7 +124,7 @@ For help finding the right code, refer to the Location Autosuggest section in th
 
 #### Debugging
 
-We strongly recommend you download a tool like Fiddler or Charles and use it with the [test harness]. This allows you to see what correct communication with the API looks like, thereby helping you to debug your application.
+We strongly recommend you download a tool like Fiddler or Charles and use it with the [test harness]. This allows you to see what correct communication with the API looks like, thereby helping you to debug your application. You may also like to use tools like Postman or Advanced REST Client to practice composition of HTTP requests.
 
 #### Known Gotchas
 
@@ -132,9 +132,9 @@ We strongly recommend you download a tool like Fiddler or Charles and use it wit
 * You will receive a `500` error if your session creation `Content-Type` does not match the request payload.
 * Some itineraries have segments that require you to change airport during your journey. You may occasionally observe missing values in the `Segments` array due to this. Similar edge-case behaviour may be seen in segments that are refuel-only stops (these are exceptionally rare these days).
 
-  [full documentation]: <http://business.skyscanner.net/portal/en-GB/Documentation/ApiOverview>
-  [currencies]: <http://business.skyscanner.net/portal/en-GB/Documentation/Currencies>
-  [locales]: <http://business.skyscanner.net/portal/en-GB/Documentation/Locales>
-  [markets]: <http://business.skyscanner.net/portal/en-GB/Documentation/Markets>
-  [test harness]: <http://business.skyscanner.net/portal/en-GB/Documentation/FlightsLivePricingQuickStart>
+  [full documentation]: <http://api.skyscanner.net/portal/en-GB/Documentation/ApiOverview>
+  [currencies]: <http://api.skyscanner.net/portal/en-GB/Documentation/Currencies>
+  [locales]: <http://api.skyscanner.net/portal/en-GB/Documentation/Locales>
+  [markets]: <http://api.skyscanner.net/portal/en-GB/Documentation/Markets>
+  [test harness]: <http://api.skyscanner.net/portal/en-GB/Documentation/FlightsLivePricingQuickStart>
   [sample_live_flights_pricing_response.json]: <https://raw.githubusercontent.com/Skyscanner/api-documentation/master/live_flights_pricing/sample_live_flights_pricing_response.json>
