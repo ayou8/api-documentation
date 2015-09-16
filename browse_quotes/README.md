@@ -45,9 +45,9 @@ http[s]://api.skyscanner.net/apiservices/xd/browsequotes/v1.0/{country}/{currenc
   * `188.39.95.93-ip` to geolocate by IP
   * `37.678,-122.452-latlong` to geolocate by latitude and longitude
 * `outbound_date` and (optionally) `inbound_date` valid values:
-  * `anytime` for quotes by month until a year from now
-  * `yyyy-mm` for quotes by day in the month you specify e.g. `2015-12` for December 2015
-  * `yyyy-mm-dd` for quotes specific to that date
+  * `anytime` for quotes until a year from now
+  * `yyyy-mm` for quotes in the month you specify e.g. `2015-12` for December 2015
+  * `yyyy-mm-dd` for quotes on that date
 
 A request might look like:
 
