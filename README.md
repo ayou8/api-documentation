@@ -2,6 +2,7 @@
 Quick-start guides are available now for:
 
 * Live flights pricing.
+* Browse quotes (indicative flights pricing).
 * Token service.
 
 Please enter the relevant directory to read the docs.
