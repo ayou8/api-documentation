@@ -132,7 +132,7 @@ We strongly recommend you download a tool like Fiddler or Charles and use it wit
 * You will receive a `500` error if your session creation `Content-Type` does not match the request payload.
 * Some itineraries have segments that require you to change airport during your journey. You may occasionally observe missing values in the `Segments` array due to this. Similar edge-case behaviour may be seen in segments that are refuel-only stops (these are exceptionally rare these days).
 
-  [full documentation]: <http://api.skyscanner.net/portal/en-GB/Documentation/ApiOverview>
+  [full documentation]: <http://business.skyscanner.net/portal/en-GB/Documentation/ApiOverview>
   [currencies]: <http://api.skyscanner.net/portal/en-GB/Documentation/Currencies>
   [locales]: <http://api.skyscanner.net/portal/en-GB/Documentation/Locales>
   [markets]: <http://api.skyscanner.net/portal/en-GB/Documentation/Markets>
