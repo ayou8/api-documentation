@@ -75,9 +75,9 @@ Accept: application/json
 
 `http://api.skyscanner.net/apiservices/browsequotes/v1.0/UK/GBP/en-GB/LOND-sky/anywhere/2015-10-09/2015-10-11?apikey=YOUR_API_KEY_HERE`
 
-##### What are the world's cheapest flights?
+##### What are the cheapest ways to fly to every country in the world from the US?
 
-`http://api.skyscanner.net/apiservices/browsequotes/v1.0/US/USD/en-US/anywhere/anywhere/anytime/anytime?apikey=YOUR_API_KEY_HERE`
+`http://api.skyscanner.net/apiservices/browsequotes/v1.0/US/USD/en-US/US/anywhere/anytime/anytime?apikey=YOUR_API_KEY_HERE`
 
 ##### I want to go from any New York City airport to Vancouver International Airport, outbound and inbound some time in April 2016.
 
