@@ -65,7 +65,7 @@ Accept: application/json
 
 ##### What's the cheapest way to fly from SFO to Greece? I don't care when.
 
-`http://api.skyscanner.net/apiservices/browsequotes/v1.0/US/USD/en-US/US/GR/anytime/anytime?apikey=YOUR_API_KEY_HERE`
+`http://api.skyscanner.net/apiservices/browsequotes/v1.0/US/USD/en-US/SFO/GR/anytime/anytime?apikey=YOUR_API_KEY_HERE`
 
 ##### Take me from BOS to SFO on 2015-09-30 and return on 2015-10-03.
 
