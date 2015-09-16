@@ -32,6 +32,8 @@ Location: http://business.skyscanner.net/apiservices/pricing/uk1/v1.0/7ba59ba586
 
 #### Step 2: Poll the Session several times
 
+The URL to poll is given by the `Location` header in the session creation response. You must add your `apiKey` as shown below. All 3 of the following requests are exactly the same, but the responses vary.
+
 ``` http
 GET http://business.skyscanner.net/apiservices/pricing/v1.0/7ba59ba5863a454db96229ecb2bafe7c_ecilpojl_54BB3A9DB131D06736C557B8F95996A6?apikey=YOUR_API_KEY_HERE HTTP/1.1
 Host: business.skyscanner.net
@@ -73,15 +75,18 @@ _Response body JSON document available here: [sample_live_flights_pricing_respon
 #### Notes
 * Several session polls may be required and you should wait 1-2 seconds between each.
 * `200` and `304` responses indicate success. These status codes are widely documented online.
-* Continue polling while the body of the polling response contains `"Status": "UpdatesPending"`.
+* Continue polling if the previous polling response matches one of these conditions:
+  * The code was `200` AND the body contained `"Status": "UpdatesPending"`.
+  * The code was `304`.
 * Stop polling when the body of the polling response contains `"Status": "UpdatesComplete"`.
 * Sessions expire after 30 minutes.
 * Do not re-use sessions for different users.
 * Do not cache deeplinks for future use by different users.
+* Do not expose your API key in client-side code. Refer to the token service documentation.
 * Always append your `apiKey` to the query string.
 * Your API key is subject to rate limiting. If you exceed the rate limit, it will reset after 60 seconds.
 * Typically, complete responses are available 0-15 seconds after session creation.
-* The live pricing API is not CORS-friendly.
+* Session creation, because it is a POST request, is not CORS-friendly (you can't do it in a browser).
 * Prices may vary in different countries on the same itinerary (usually for legal or business reasons).
 
 #### Valid Inputs
@@ -95,6 +100,7 @@ _Response body JSON document available here: [sample_live_flights_pricing_respon
 * Always set `groupPricing` to true. This flag exists for backwards compatibility only.
 * Always set `locationSchema` to `iata` for ease of use.
 * References: [currencies], [locales], and [markets] (countries).
+* `country` is typically a 2-character code indicating the country in which the ticket purchaser is resident.
 * Pax limits: `adults` 1-8, `children` 0-8, `infants` not greater than `adults`.
 * Cabin class: `Economy`, `PremiumEconomy`, `Business`, `First`.
 * Origin/destination inputs may be the following codes that represent airports or cities:
