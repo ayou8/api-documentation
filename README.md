@@ -7,7 +7,7 @@ Quick-start guides are available now for:
 
 Please enter the relevant directory above to read the docs.
 
-It is assumed you have an API key already. Please use one API key per app.
+**You will need an API key** which you can get at http://goo.gl/XS585l
 
 [Full documentation] is available at Skyscanner for Business, including documentation on our car hire and hotels APIs.
 
