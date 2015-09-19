@@ -5,7 +5,7 @@ Quick-start guides are available now for:
 * Browse quotes (indicative flights pricing).
 * Token service.
 
-Please enter the relevant directory to read the docs.
+Please enter the relevant directory above to read the docs.
 
 It is assumed you have an API key already. Please use one API key per app.
 
