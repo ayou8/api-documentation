@@ -27,9 +27,6 @@ Make a GET request with your desired travel parameters. You can use HTTP or HTTP
 
 `http[s]://api.skyscanner.net/apiservices/browsequotes/v1.0/{country}/{currency}/{locale}/{origin}/{destination}/{outbound_date}[/{inbound_date}]?apikey=YOUR_API_KEY_HERE`
 
-JSONP-friendly URL:
-`http[s]://api.skyscanner.net/apiservices/xd/browsequotes/v1.0/{country}/{currency}/{locale}/{origin}/{destination}/{outbound_date}[/{inbound_date}]?apikey=YOUR_API_KEY_HERE&callback=myJsMethod`
-
 * `country` valid values (typically the country in which the ticket purchaser is resident): See [countries reference]
 * `currency` valid values: See [currencies reference]
 * `locale` valid values: See [locales reference]
